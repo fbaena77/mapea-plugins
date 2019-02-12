@@ -1,0 +1,517 @@
+@font-face {
+  font-family: 'edition';
+  src:  url('../fonts/edition.eot?svzdah');
+  src:  url('../fonts/edition.eot?svzdah#iefix') format('embedded-opentype'),
+    url('../fonts/edition.ttf?svzdah') format('truetype'),
+    url('../fonts/edition.woff?svzdah') format('woff'),
+    url('../fonts/edition.svg?svzdah#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.m-panel.m-edition.opened{
+	opacity: .8 !important;
+}
+
+
+#m-button-entitypolygon-vertical {
+    position: absolute;
+    margin: 0;
+    z-index: 1004;
+    background-color: rgba(255,255,255, 1);
+    box-shadow: 0 2px 4px rgba(0,0,0,.2), 0 -1px 0 rgba(0,0,0,.02);
+    border-radius: 4px;
+    padding: 0;
+    width: 40px;
+    display: inherit;
+    left: 0;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+#m-button-entitypolygon-horizontal {
+    position: relative;
+    margin: 0;
+    z-index: 1004;
+    background-color: rgba(255,255,255, 1);
+    box-shadow: 0 2px 4px rgba(0,0,0,.2), 0 -1px 0 rgba(0,0,0,.02);
+    height: 40px;
+    padding: 0;
+    display: flex;
+}
+ 
+.g-editiontools-closed:before {
+	content: "\e927" !important;
+	font-size: 24px;
+	top: -0.9px !important;
+	color: #8294af;
+	position: relative;
+	top: -2px;
+}
+
+.g-editiontools-opened-vertical {
+	background-color: #497b92 !important;
+	display: block;
+	float: none !important;
+	height: 40px !important;
+	border-bottom-right-radius: 0 !important;
+	border-top-left-radius: 4px !important;
+}
+
+.g-editiontools-opened-horizontal {
+	background-color: #497b92 !important;
+	display: block;
+	height: 40px !important;
+}
+
+.g-editiontools-opened-vertical:before {
+	content: "\e91d" !important;
+	font-size: 15px;
+	color: white;
+	transition: opacity .25s ease 0s, color .25s ease 0s;
+	padding: 0;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	border: none;
+	font-family: g-cartografia !important;
+	speak: none;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+}
+
+.g-editiontools-opened-horizontal:before {
+	content: "\e91d" !important;
+	font-size: 15px;
+	color: white;
+	transition: opacity .25s ease 0s, color .25s ease 0s;
+	padding: 0;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	border: none;
+	font-family: g-cartografia !important;
+	speak: none;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+}
+
+.m-entitygeometry-container button[class^=g-cartografia-]:disabled{
+	opacity: 0.2 !important;
+}
+
+.m-entitygeometry-container button[class^=g-cartografia-].selected{
+	opacity: 1 !important;
+	color: white !important;
+	background-color: #497b92 !important;
+	width: 100%;
+}
+
+.m-entitygeometry-container button[class^=icon-editor-]:disabled{
+	opacity: 0.2 !important;
+}
+
+.m-entitygeometry-container button[class^=icon-editor-].selected{
+	opacity: 1 !important;
+	color: white !important;
+	background-color: #497b92 !important;
+	width: 100%;
+}
+
+.m-entitygeometry-container button[class^=icon-edition-].selected{
+	opacity: 1 !important;
+	color: white !important;
+	background-color: #497b92 !important;
+	position: relative;
+	z-index: 10;
+}
+
+.dropdown>button[class^=g-cartografia-].selected{
+	opacity: 1 !important;
+	color: white !important;
+	background-color: #497b92 !important;
+	z-index: 10;
+}
+
+.dropdown>button[class^=icon-editor-].selected{
+	opacity: 1 !important;
+	color: white !important;
+	background-color: #497b92 !important;
+	z-index: 10;
+}
+
+.dropdown>button[class^=icon-edition-].selected{
+	opacity: 1 !important;
+	color: white !important;
+	background-color: #497b92 !important;
+	position: relative;
+	z-index: 10;
+}
+
+.m-entitygeometry-container button[class^=fa]:disabled{
+	opacity: 0.2 !important;
+}
+
+.m-entitygeometry-container button[class^=fa].selected{
+	opacity: 1 !important;
+	color: white !important;
+	background-color: #497b92 !important;
+	width: 100%;
+}
+
+[class^="icon-edition-"], [class*="icon-edition-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'edition' !important;
+	padding: 8px;
+	font-size: 24px;
+	background: 0 0;
+	border: none;
+	cursor: pointer;
+	width: 40px !important;
+	opacity: .75;
+	float: right;
+	-webkit-transition: opacity .25s ease 0s;
+	transition: opacity .25s ease 0s;
+	color: #404040 !important;
+	margin: 0;
+	speak: none;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	opacity: 0.5 !important;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	outline-style: none;
+}
+
+.icon-edition-layers:before {
+  content: "\e901";
+}
+.icon-edition-empty-polygon:before {
+  content: "\e90b";
+}
+.icon-edition-intersection:before {
+  content: "\e90c";
+}
+.icon-edition-import-button:before {
+  content: "\e90d";
+}
+.icon-edition-union:before {
+  content: "\e90e";
+	font-size: 31px;
+}
+.icon-edition-select-line:before {
+  content: "\e900";
+}
+.icon-edition-select-all:before {
+  content: "\e906";
+}
+.icon-edition-deselect-all:before {
+  content: "\e90a";
+}
+.icon-edition-delete-selected:before {
+  content: "\e905";
+}
+.icon-edition-zoom-sandbox:before {
+  content: "\e907";
+}
+.icon-edition-zoom-selection:before {
+  content: "\e908";
+}
+.icon-edition-snapping:before {
+  content: "\e909";
+}
+.icon-edition-select-area:before {
+  content: "\e904";
+}
+.icon-edition-modify-polygon:before {
+  content: "\e902";
+}
+.icon-edition-select-click:before {
+  content: "\e903";
+}
+
+
+.icon-edition-layers:hover {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+.icon-edition-empty-polygon:hover {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+.icon-edition-intersection:hover {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+.icon-edition-import-button:hover {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+.icon-edition-union:hover {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+.icon-edition-select-line:hover {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+.icon-edition-select-all:hover {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+.icon-edition-deselect-all:hover {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+.icon-edition-delete-selected:hover {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+.icon-edition-zoom-sandbox:hover {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+.icon-edition-zoom-selection:hover {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+.icon-edition-snapping:hover {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+.icon-edition-select-area:hover {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+.icon-edition-modify-polygon:hover {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+.icon-edition-select-click:hover {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+
+.m-entitygeometry-container button[class^=icon-ug-] {
+    display: inline-block;
+    float: right;
+    padding: 8px;
+    font-size: 24px;
+    background: 0 0;
+    border: none;
+    cursor: pointer;
+    opacity: .75;
+    -webkit-transition: opacity .25s ease 0s;
+    transition: opacity .25s ease 0s;
+    color: #888a85;
+    margin: 0;
+}
+
+.m-entitygeometry-container button[class^=icon-ug-].selected {
+    opacity: 1 !important;
+    color: white !important;
+    background-color: #8294af !important;
+}
+
+.icon-ug-group-solid:before {
+  content: "\e100";
+}
+.icon-ug-ungroup-solid:before {
+  content: "\e101";
+}
+.icon-ug-ungroup-regular:before {
+  content: "\e102";
+}
+
+/***************
+     DIALOG
+***************/
+
+.m-edition-dialog-button {
+	display: inline-block;
+}
+
+.m-edition-dialog-button>button {
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+	text-align: center;
+	cursor: pointer;
+	margin-top: 10px;
+	padding: 5px;
+	width: 100px;
+	font-weight: 700;
+	background-color: #337ceb;
+	color: #fff;
+}
+
+#m-edition-dialog-button-aceptar {
+	padding-left: 32.5%;
+}
+
+
+/***************
+     SPINNER
+***************/
+
+.edition-spinner {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 1);
+    text-align: center;
+    padding-top: 20%;
+}
+
+.edition-spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #f7f0f0;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.edition-spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.edition-spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+
+/*********************
+     SWIPE CONTROL
+*********************/
+
+.ol-swipe
+{	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+
+.ol-swipe:before
+{	content: "";
+	position: absolute;
+	top: -5000px;
+	bottom: -5000px;
+	left: 50%;
+	width: 4px;
+	background: #fff;
+	z-index:-1;
+	transform: translate(-2px, 0);
+	-webkit-transform: translate(-2px, 0);
+}
+.ol-swipe.horizontal:before
+{	left: -5000px;
+	right: -5000px;
+	top: 50%;
+	bottom: auto;
+	width: auto;
+	height: 4px;
+}
+
+.ol-swipe,
+.ol-swipe button
+{	cursor: ew-resize;
+}
+.ol-swipe.horizontal,
+.ol-swipe.horizontal button
+{	cursor: ns-resize;
+}
+
+.ol-swipe:after,
+.ol-swipe button:before,
+.ol-swipe button:after
+{	content: "";
+	position: absolute;
+	top: 25%;
+	bottom: 25%;
+	left: 50%;
+	width: 2px;
+	background: rgba(255,255,255,0.8);
+	transform: translate(-1px, 0);
+	-webkit-transform: translate(-1px, 0);
+}
+.ol-swipe button:after
+{	transform: translateX(5px);
+	-webkit-transform: translateX(5px);
+}
+.ol-swipe button:before
+{	transform: translateX(-7px);
+	-webkit-transform: translateX(-7px);
+}
+
+/****************************
+		DROPDOWN EFFECTS
+****************************/
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+	width:0;
+    overflow:hidden;
+    position: absolute;
+    display: inline-flex;
+    background-color: white;
+	color: #404040;
+    z-index: 1;
+    border-left: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    transition: width 0.35s;
+}
+
+.dropdown div > button {width: 100%;}
+
+.myDropdown div > button {width: 100%;}
+
+.dropdown div > button:hover {
+	background-color: #497b92 !important;
+	color: white !important;
+}
+
+.show {
+	display: block;	
+} 	
