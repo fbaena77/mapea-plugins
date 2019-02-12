@@ -1,6 +1,6 @@
 {
    "url": {
-      "name": "Navigation"
+      "name": "Edition"
    },
-   "constructor": "M.plugin.Navigation"
+   "constructor": "M.plugin.Edition"
 }
