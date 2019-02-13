@@ -1,6 +1,6 @@
 # mapea-plugins
 
-Instanciación:
+Instanciación Plugin edition:
 
 			var editionBarPlugin = new M.plugin.Edition({
 				config: {
