@@ -1,0 +1,33 @@
+<div id="m-import-tabs-content">
+	<div id="m-layerimportService-container" class="importServiceContainer">
+		<form id="predefServiceserverForm">
+			<label>Servidor predefinido:
+		        <select id="selectServer">
+		          <option value="">Seleccione servidor</option>
+		        </select>
+		        </label>
+		</form>
+		<div id="newServiceserverForm">
+			<label>URL nuevo servidor:
+		        <input id="m-layerimportService-newserver" type="url" title="Introduzca una URL válida" size="20" /> <!-- pending test with Safari; if not working, change url for text -->
+		      </label>
+			<div id="conect-button-container"><button><i class="g-cartografia-mundo"></i> Conectar</button></div>
+		</div>
+		<div id="m-searching-capabilities" class="m-searching-result g-cartografia-spinner hidden"></div>
+		<form id="importServiceForm" class="hidden">
+			<table>
+				<thead>
+					<tr>
+						<th><input type="checkbox" /></th>
+						<th>Capas</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</form>
+		<div class="saveButtonContainer hidden">
+			<button id="importServiceButton"><i class="g-cartografia-guardar"></i> Añadir</button>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,309 @@
+.m-catalog {
+	top: 0px;
+	position: absolute;
+	left: 0px;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.m-catalog-container {
+	background-color: white !important;
+	padding-bottom: 6px !important;
+	border-bottom: 1px solid #ccc !important;
+	border-right: 1px solid #ccc !important;
+	border-bottom-right-radius: 8px !important;
+	position: relative;
+	height: 500px;
+	box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2), 0 -1px 0px rgba(0, 0, 0, 0.02) !important;
+	cursor: default;
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	resize: horizontal;
+    display: block !important;
+    direction: rtl;
+    min-width: 300px;
+    max-width: 600px;
+    height: auto !important;
+    opacity: 0.9;
+}
+
+.m-catalog-container>.title {
+    line-height: 42px;
+    text-align: center;
+    height: 36px;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+    color: currentColor;
+    background-color: #ebeaea;
+    opacity: 0.8;
+}
+
+
+.catalog-tab {
+    height: 24px;
+    text-align: left;
+    padding-top: 4px;
+    background-color: #5c889d;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    padding-left: 8px;
+}
+
+.splitter.row {
+    top: 100px;
+    height: 3px;
+    min-height: 2px;
+    cursor: row-resize;
+    background-image: url(../fonts/hgripsm.png);
+}
+
+.splitter {
+    background: rgba(220,220,220,1);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+
+.wfs-panel{
+    height: 200px;
+    margin-left: -9%;
+    max-height: 600px;
+}
+
+#wfs-manager {
+    width: 94%;
+    position: relative;
+    height: 100%;
+    right: 0;
+    padding-top: 4px;
+    direction: ltr;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.props.map-node-root{
+	display: none !important;
+    background-color: #5c889d;
+    color: white;
+    margin-top: -5px;
+    height: 28px;
+    width: 120%;
+    margin-left: -9px;
+    font-size: larger;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.map-node-root .props-up .prop-info {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 68%;
+    margin-left: 8px;
+    padding-top: 5px;
+}
+
+.map-node-root .map-node-expand {
+    color: white !important;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    margin-top: 8px;
+    margin-left: 6px;
+}
+
+.advLS-panel{
+    margin-left: -9%;
+}
+
+.m-areas>div.m-area.m-left>div.m-panel.m-catalog.opened,
+.m-areas>div.m-area.m-left>div.m-panel.m-catalog.opened>div.m-panel-controls {
+	align-items: center !important;
+}
+
+.m-areas>div.m-area>div.m-panel.m-catalog.opened>button.m-panel-btn {
+	background-color: #e7338c;
+	position: inherit;
+	color: #fff;
+	z-index: 999999;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 -1px 0px rgba(0, 0, 0, 0.02);
+	height: 38px;
+}
+
+.m-areas>div.m-area>div.m-panel.m-catalog {
+  order: -1;
+  width: auto;
+  z-index: 1002;
+  height: 38px;
+}
+
+.m-catalog div.m-control button[class*=" g-cartografia-"], div.m-control button[class^=g-cartografia-] {
+	opacity: .5 !important;
+}
+
+.m-areas>div.m-area.m-left>div.m-panel.m-catalog>div.m-panel-controls {
+	align-items: center !important;
+}
+
+.g-catalog-closed:before {
+	content: "\e907" !important;
+	font-size: 20px;
+	color: #53a874;
+	position: relative;
+}
+
+.g-catalog-opened-edition {
+	background-color: #497b92 !important;
+	opacity: 0.9 !important;
+}
+
+.g-catalog-opened {
+	background-color: #1f7020 !important;
+	opacity: 0.9 !important;
+}
+
+.g-catalog-opened:before {
+	content: "\e919" !important;
+	font-size: 15px;
+	color: white;
+	transition: opacity .25s ease 0s, color .25s ease 0s;
+	padding: 0;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	border: none;
+	font-family: g-cartografia !important;
+	speak: none;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+}
+
+.g-catalog-opened-edition:before {
+	content: "\e919" !important;
+	font-size: 15px;
+	color: white;
+	transition: opacity .25s ease 0s, color .25s ease 0s;
+	padding: 0;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	border: none;
+	font-family: g-cartografia !important;
+	speak: none;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+}
+
+button.catalog-accordion {
+    background-color: lightgray;
+    color: white;
+    cursor: pointer;
+    width: 96%;
+    border: 1px solid #ccc !important;
+    border-radius: 4px;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    height: 28px;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
+button.catalog-accordion.active, button.catalog-accordion:hover {
+	background-color: #568299;
+}
+
+button.catalog-accordion:after {
+	content: '\002B';
+	color: white;
+	font-weight: bold;
+	float: right;
+}
+
+button.catalog-accordion.active:after {
+	content: "\2212";
+}
+
+div.catalog-panel {
+    margin-top: -1px;
+	background-color: white;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: max-height 0.2s ease-out;
+	width: inherit;
+	max-height: 0;
+}
+
+/***************
+     SPINNER
+***************/
+
+.catalog-spinner {
+    text-align: center;
+}
+
+.catalog-spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #53a874;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.catalog-spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.catalog-spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}

@@ -1,0 +1,44 @@
+<div class="m-control m-import-container">
+	<div class="m-import-container">
+		<div id="m-import-tabs-content">
+			<div id="m-advLS-container" class="importcontainer">
+				<div id="m-advLS-CatalogUser">
+					<label style="margin-left: 6px;">Código Usuario</label>
+					<input name="catalogUser" id="m-advLS-CatalogUser-input"
+						type="text" disabled placeholder="Usuario" value="{{user}}">
+				</div>
+				<table id="m-advLS-CatalogList-table">
+					<thead id="m-advLS-CatalogList-table-head">
+						<tr>
+							<th id="m-advLS-CatalogList-header" style="width: 50%;">Nombre
+								Configuración</th>
+							<th id="m-advLS-CatalogList-header" style="width: 20%;">Tamaño</th>
+							<th id="m-advLS-CatalogList-header" style="width: 26%;">Fecha</th>
+							<th id="m-advLS-CatalogList-header" style="width: 4%;">&nbsp</th>
+						</tr>
+					</thead>
+					<tbody id="m-advLS-CatalogList-table-body">
+						{{#each configs}}
+						<tr id="idConfig-{{idConfig}}">
+							<td>{{dDescripcion}}</td>
+							<td>{{size}} Mb</td>
+							<td>{{fCreacion}}</td>
+							<td id="m-advLS-CatalogList-delete"
+								class="g-cartografia-papelera advLS"
+								title="Eliminar Configuración"></td>
+						</tr>
+						{{/each}}
+					</tbody>
+				</table>
+				<div class="catalogButtonContainer">
+					<button id="m-advLS-CatalogList-loadTOC">
+						<i class="g-cartografia-descargar"></i> Cargar selección
+					</button>
+					<button id="m-advLS-CatalogList-saveTOC">
+						<i class="g-cartografia-guardar"></i> Guardar TOC actual
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

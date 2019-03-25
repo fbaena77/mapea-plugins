@@ -1,0 +1,30 @@
+<div class="m-control m-import-container">
+	<div class="m-import-container">
+		<div id="m-import-tabs-content">
+			<div id="m-importfile-container" class="importcontainer">
+				<div class="drop-zone">Arrastre un fichero (.kml .gml .zip)
+					aquí</div>
+				<form id="importForm" method="post" enctype="multipart/form-data">
+					<label class="inputfileContainer">
+						<button>
+							<i class="g-cartografia-zoom"></i> Examinar
+						</button> <input type="file" accept=".kml, .gml, .zip" /> <input
+						id="inputFile" type="text"
+						placeholder="Seleccione un fichero (.kml .gml .zip)"
+						disabled="disabled" />
+					</label>
+					<div id="addShpContainer" class="saveButtonContainer hidden">
+						<button id="importshpButton" type="submit">
+							<i class="g-cartografia-guardar"></i> Añadir
+						</button>
+					</div>
+				</form>
+				<div id="addXmlContainer" class="saveButtonContainer">
+					<button id="importFileButton">
+						<i class="g-cartografia-guardar"></i> Añadir
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,33 @@
+<div id="m-import-tabs-content">
+	<div id="m-layerimportwms-container" class="importcontainer">
+		<form id="predefwmsserverForm">
+			<label>Servidor predefinido:
+		        <select id="selectServer">
+		          <option value="">Seleccione servicio</option>
+		        </select>
+		        </label>
+		</form>
+		<div id="newwmsserverForm">
+			<label>URL nuevo servidor:
+		        <input id="m-layerimportwms-newserver" type="url" title="Introduzca una URL válida" size="20" /> <!-- pending test with Safari; if not working, change url for text -->
+		      </label>
+			<div id="conect-button-container"><button><i class="g-cartografia-mundo"></i> Conectar</button></div>
+		</div>
+		<div id="m-searching-capabilities" class="m-searching-result g-cartografia-spinner hidden"></div>
+		<form id="importwmsForm" class="hidden">
+			<table>
+				<thead>
+					<tr>
+						<th><input type="checkbox" /></th>
+						<th>Capas</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</form>
+		<div class="saveButtonContainer hidden">
+			<button id="importwmsButton"><i class="g-cartografia-guardar"></i> Añadir</button>
+		</div>
+	</div>
+</div>

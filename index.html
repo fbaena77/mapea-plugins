@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="mapea" content="yes">
+	<title>TEST-GIS</title>
+
+	<!-- styles -->
+	<link rel="stylesheet" href="http://mapea4-sigc.juntadeandalucia.es/assets/css/mapea.ol.min.css"/>
+	<link rel="stylesheet" href="src/advLS/facade/assets/css/advLS.css"/>
+	<link rel="stylesheet" href="src/WFSManager/facade/assets/css/WFSManager.css"/>
+	<link rel="stylesheet" href="src/catalog/facade/assets/css/catalog.css"/>
+	<link rel="stylesheet" href="src/edition/facade/assets/css/edition.css"/>
+
+	<!-- plugin dependencies here -->
+	<script type="text/javascript" src="http://mapea4-sigc.juntadeandalucia.es/vendor/browser-polyfill.js"></script>
+	<script type="text/javascript" src="http://mapea4-sigc.juntadeandalucia.es/js/mapea.ol.min.js"></script>
+ 	<script type="text/javascript" src="config/configurationDEV.js"></script>
+	<script type="text/javascript" src="js/libraries/closure/closure/goog/base.js"></script>
+	<script type="text/javascript" src="third-party/jsonix/schemas.js"></script>
+	<script type="text/javascript" src="third-party/jsonix/Jsonix-all.js"></script>
+	<script type="text/javascript" src="third-party/FileSaver.min.js"></script>
+	<script type="text/javascript" src="third-party/turf.min.js"></script>
+	<script type="text/javascript" src="third-party/jsts.min.js"></script>
+	<script type="text/javascript" src="third-party/jszip.min.js"></script>
+	<script type="text/javascript" src="third-party/shp.min.js"></script>
+	<script type="text/javascript" src="js/catalog-config.js"></script>
+	<script type="text/javascript" src="js/WMSServers.js"></script>
+	<script type="text/javascript" src="js/WFSServers.js"></script>
+	
+	<!-- Advanced layer switcher -->
+	<script type="text/javascript" src="src/advLS/impl/ol/js/advLSControl.js"></script>
+	<script type="text/javascript" src="src/advLS/impl/ol/js/advLSAddWMSControl.js"></script>
+	<script type="text/javascript" src="src/advLS/impl/ol/js/advLSAddFileControl.js"></script>
+	<script type="text/javascript" src="src/advLS/impl/ol/js/advLSContextMenuControl.js"></script>
+	<script type="text/javascript" src="src/advLS/impl/ol/js/advLSGeometryBase.js"></script>
+	<script type="text/javascript" src="src/advLS/impl/ol/js/advLSHighlightGeometry.js"></script>
+	<script type="text/javascript" src="src/advLS/impl/ol/js/advLSVectorLayer.js"></script>
+	<script type="text/javascript" src="src/advLS/facade/js/advLSHighlightGeometry.js"></script>
+	<script type="text/javascript" src="src/advLS/facade/js/advLSSpinner.js"></script>
+	<script type="text/javascript" src="src/advLS/facade/js/advLSPanelControl.js"></script>
+	<script type="text/javascript" src="src/advLS/facade/js/advLSDialogControl.js"></script>
+	<script type="text/javascript" src="src/advLS/facade/js/advLSContextMenuControl.js"></script>
+	<script type="text/javascript" src="src/advLS/facade/js/advLSToc2FileControl.js"></script>
+	<script type="text/javascript" src="src/advLS/facade/js/advLSAddFolderControl.js"></script>
+	<script type="text/javascript" src="src/advLS/facade/js/advLSAddFileControl.js"></script>
+	<script type="text/javascript" src="src/advLS/facade/js/advLSAddWMSControl.js"></script>
+	<script type="text/javascript" src="src/advLS/facade/js/advLSLayerCreatorControl.js"></script>
+	<script type="text/javascript" src="src/advLS/facade/js/advLSControl.js"></script>
+	<script type="text/javascript" src="src/advLS/facade/js/advLSPlugin.js"></script>
+	
+	<!-- WFSManager -->
+	<script type="text/javascript" src="src/WFSManager/impl/ol/js/WFSManagerControl.js"></script>
+	<script type="text/javascript" src="src/WFSManager/impl/ol/js/WFSManagerAddServiceControl.js"></script>
+	<script type="text/javascript" src="src/WFSManager/impl/ol/js/WFSManagerContextMenuControl.js"></script>
+	<script type="text/javascript" src="src/WFSManager/facade/js/WFSManagerSpinner.js"></script>
+	<script type="text/javascript" src="src/WFSManager/facade/js/WFSManagerPanelControl.js"></script>
+	<script type="text/javascript" src="src/WFSManager/facade/js/WFSManagerDialogControl.js"></script>
+	<script type="text/javascript" src="src/WFSManager/facade/js/WFSManagerContextMenuControl.js"></script>
+	<script type="text/javascript" src="src/WFSManager/facade/js/WFSManagerAddFolderControl.js"></script>
+	<script type="text/javascript" src="src/WFSManager/facade/js/WFSManagerAddServiceControl.js"></script>
+	<script type="text/javascript" src="src/WFSManager/facade/js/WFSManagerFactoryControl.js"></script>
+	<script type="text/javascript" src="src/WFSManager/facade/js/WFSManagerControl.js"></script>
+	<script type="text/javascript" src="src/WFSManager/facade/js/WFSManagerPlugin.js"></script>
+	
+	<!-- Catalog -->
+	<script type="text/javascript" src="src/catalog/impl/ol/js/catalogControl.js"></script>
+	<script type="text/javascript" src="src/catalog/facade/js/catalogSpinner.js"></script>
+	<script type="text/javascript" src="src/catalog/facade/js/catalogSplitter.js"></script>
+	<script type="text/javascript" src="src/catalog/facade/js/catalogControl.js"></script>
+	<script type="text/javascript" src="src/catalog/facade/js/catalogPlugin.js"></script>
+	
+	<!-- Edition Bar -->
+    <script type="text/javascript" src="src/edition/impl/ol/js/editionLayer.js" /></script>
+    <script type="text/javascript" src="src/edition/impl/ol/js/editionSpatialEngine.js" /></script>
+    <script type="text/javascript" src="src/edition/impl/ol/js/editionGeometryControl.js" /></script>
+    <script type="text/javascript" src="src/edition/impl/ol/js/editionControl.js"></script>
+    <script type="text/javascript" src="src/edition/impl/ol/js/editionGeometryBase.js"></script>
+  	<script type="text/javascript" src="src/edition/impl/ol/js/editionSnapping.js"></script>
+  	<script type="text/javascript" src="src/edition/impl/ol/js/editionInsertLine.js"></script>
+  	<script type="text/javascript" src="src/edition/impl/ol/js/editionInsertGeometry.js"></script>
+  	<script type="text/javascript" src="src/edition/impl/ol/js/editionInsertCoords.js"></script>
+  	<script type="text/javascript" src="src/edition/impl/ol/js/editionModifyGeometry.js"></script>
+  	<script type="text/javascript" src="src/edition/impl/ol/js/editionTranslateGeometry.js"></script>
+  	<script type="text/javascript" src="src/edition/impl/ol/js/editionSelectGeometry.js"></script>
+  	<script type="text/javascript" src="src/edition/impl/ol/js/editionHighlightGeometry.js"></script>
+  	<script type="text/javascript" src="src/edition/impl/ol/js/editionInsertTemporalGeometry.js" /></script>
+  	<script type="text/javascript" src="src/edition/impl/ol/js/editionSwipeControl.js"></script>
+    <script type="text/javascript" src="src/edition/facade/js/editionSpinner.js"></script>
+    <script type="text/javascript" src="src/edition/facade/js/editionDialog.js"></script>
+    <script type="text/javascript" src="src/edition/facade/js/editionSpatialEngine.js"></script>
+    <script type="text/javascript" src="src/edition/facade/js/editionSnapping.js"></script>
+  	<script type="text/javascript" src="src/edition/facade/js/editionInsertLine.js"></script>
+  	<script type="text/javascript" src="src/edition/facade/js/editionInsertGeometry.js"></script>
+  	<script type="text/javascript" src="src/edition/facade/js/editionInsertCoords.js"></script>
+  	<script type="text/javascript" src="src/edition/facade/js/editionModifyGeometry.js"></script>
+  	<script type="text/javascript" src="src/edition/facade/js/editionTranslateGeometry.js"></script>
+  	<script type="text/javascript" src="src/edition/facade/js/editionSelectGeometry.js"></script>
+  	<script type="text/javascript" src="src/edition/facade/js/editionHighlightGeometry.js"></script>
+    <script type="text/javascript" src="src/edition/facade/js/editionInsertTemporalGeometry.js" /></script>
+    <script type="text/javascript" src="src/edition/facade/js/editionBaseControl.js" /></script>
+    <script type="text/javascript" src="src/edition/facade/js/editionGeometryControl.js" /></script>
+    <script type="text/javascript" src="src/edition/facade/js/editionPlugin.js" /></script>
+
+	<!-- Launch script -->
+	<script type="text/javascript" src="js/mapview.js"></script>
+</head>
+
+<body onload="app.initialize()">
+	<div class='visor-container'>
+		<div class="map-container">
+			<div id="mapjs"></div>
+		</div>
+	</div>
+</body>
+
+</html>
