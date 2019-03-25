@@ -1,7 +1,7 @@
 function getCatalogLayers(geoserverURL){
 	return {
 		"id": "root",
-		"uuidgeoperfil": "TEST",
+		"uuidgeoperfil": "TEST_Layers",
 		"label": "Capas",
 		"type": "folder",
 		"visible": false,
@@ -195,7 +195,7 @@ function getCatalogLayers(geoserverURL){
 function getCatalogServices(geoserverURL){
 	return {
 		"id": "root",
-		"uuidgeoperfil": "REAFA",
+		"uuidgeoperfil": "TEST_WFS_Services",
 		"label": "Servicios",
 		"type": "folder",
 		"visible": false,
