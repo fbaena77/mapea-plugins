@@ -318,7 +318,7 @@ M.control.advLSContextMenuControl.prototype.downloadTOCFile = function () {
 	var this_ = this;
 	this.generateZipFromTOC()
 	.then(function(content) {
-		saveAs(content, "reafa-catalog.zip");
+		saveAs(content, "catalog-config.zip");
 	});
 };
 
